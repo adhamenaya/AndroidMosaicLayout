@@ -20,6 +20,7 @@ For example of designing MosaicLayout pattern:
 
 This is the simplest pattern designing you can have.
 
+```
  ----------- ----------- ----------- -----------
 |			|			|			|			|
 |	img 1	|	img 2	|	img 3	|	img 4	|
@@ -29,7 +30,8 @@ This is the simplest pattern designing you can have.
 |	img 5	|	img 6	|	img 7	|	img 8	|
 |			|			|			|			|
  ----------  ----------- ----------- -----------
- 
+ ```
+
  NOTE: reading the patter is from left to right then top to bottom.
  
  As you notice in the previous table, the layout contains on small squares only.
