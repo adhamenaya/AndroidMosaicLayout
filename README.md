@@ -15,31 +15,82 @@ If you decided to choose a pattern or more, you have to follow the following not
 	* SMALL SQUARE (1 inner cell)
 	* HORIZONTAL RECTANGLE (2 inner cells aligned horizontally)
 	* VERTICAL RECTANGLE (2 inner cells aligned vertically)
+3. Reading the patter is from left to right then top to bottom.
 
-For example of designing MosaicLayout pattern:
-
-This is the simplest pattern designing you can have.
+* Example 1: 8 small blocks
 
 ```
  ----------- ----------- ----------- -----------
 |			|			|			|			|
 |	img 1	|	img 2	|	img 3	|	img 4	|
+|	small	|	small	|	small	|	small	|
 |			|			|			|			|
- ----------	 ----------- ----------- -----------
+| --------- | --------- | --------- | --------- |
 |			|			|			|			|
 |	img 5	|	img 6	|	img 7	|	img 8	|
+|	small	|	small	|	small	|	small	|
 |			|			|			|			|
  ----------  ----------- ----------- -----------
  ```
-
- NOTE: reading the patter is from left to right then top to bottom.
  
  As you notice in the previous table, the layout contains on small squares only.
  Then the layout pattern should be written as: 
  
 ```
-BLOCK_PATTERN pattern1] = { 
+BLOCK_PATTERN pattern[] = { 
 		BLOCK_PATTERN.SMALL, BLOCK_PATTERN.SMALL, BLOCK_PATTERN.SMALL, BLOCK_PATTERN.SMALL,
 		BLOCK_PATTERN.SMALL, BLOCK_PATTERN.SMALL, BLOCK_PATTERN.SMALL, BLOCK_PATTERN.SMALL 
+};
+```
+
+* Example 2: 1 big block and 4 small blocks
+
+```
+ ----------- ----------- ----------- -----------
+|						|			|			|
+|				    	|	img 2	|	img 3	|
+|	big 		big		|	small	|	small	|
+|						|			|			|
+| 		  img1			| --------- | --------- |
+|						|			|			|
+|	 		    	    |	img 4	|	img 5	|
+|	big			big		|	small	|	small	|
+|						|			|			|
+ ----------  ----------- ----------- -----------
+ ```
+ 
+ As you notice in the previous table, image 1 occupies 4 inner cells creating a big block in the layout.
+ Then the layout pattern should be written as: 
+ 
+```
+BLOCK_PATTERN pattern[] = { 
+		BLOCK_PATTERN.BIG, BLOCK_PATTERN.BIG, BLOCK_PATTERN.SMALL, BLOCK_PATTERN.SMALL,
+		BLOCK_PATTERN.BIG, BLOCK_PATTERN.BIG, BLOCK_PATTERN.SMALL, BLOCK_PATTERN.SMALL 
+};
+```
+
+* Example 3: 1 vertical block, 2 small blocks and 2 horizontal blocks
+
+```
+ ----------- ----------- ----------- -----------
+|			|			|						|
+|			|	img 2	|		  img 3			|
+|	vert.	|	small	|	horiz.		horiz.	|
+|			|			|						|
+|	img 1	| --------- | --------- | --------- |
+|			|						|			|
+|	 		|		  img 4			|	img 5	|
+|	vert.	|	horiz.		horiz.	|	small	|
+|			|						|			|
+ ----------  ----------- ----------- -----------
+ ```
+ 
+ As you notice in the previous table, image 1 occupies 2 inner cells vertically, images 3 and 4 occupies 2 inner cells horizontally/
+ Then the layout pattern should be written as: 
+ 
+```
+BLOCK_PATTERN pattern[] = { 
+		BLOCK_PATTERN.VERTICAL, BLOCK_PATTERN.SMALL, BLOCK_PATTERN.HORIZONTAL, BLOCK_PATTERN.HORIZONTAL,
+		BLOCK_PATTERN.VERTICAL, BLOCK_PATTERN.HORIZONTAL, BLOCK_PATTERN.HORIZONTAL, BLOCK_PATTERN.SMALL 
 };
 ```
