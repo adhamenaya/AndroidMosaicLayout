@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action1"
+        android:title="Random all 90 Patterns"/>
+    <item
+        android:id="@+id/action2"
+        android:title="Random selected patterns"/>
+    <item
+        android:id="@+id/action3"
+        android:title="Ordered selected patterns"/>
+
+</menu>

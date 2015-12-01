@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="ViewHolder">
+        <ignore path="src/com/example/android500pxlayoutexample/MyAdapter.java" />
+    </issue>
+</lint>
