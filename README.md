@@ -95,4 +95,4 @@ BLOCK_PATTERN pattern[] = {
 };
 ```
 
-#You can dseign the layout in 92 different patterns!
+##You can design the layout in 92 different patterns!
