@@ -1,5 +1,5 @@
 # MosaicLayout
-Mosaic layout is android layout to display group of views in more that 90 different patters
+Mosaic layout is android layout to display group of views in more that 92 different patters
 
 ## What is MosaicLayout?
 It is UI layout library for android. It displays a group of views and view groups (Images, Text, Layout...) in beautiful decoration. 
@@ -94,3 +94,5 @@ BLOCK_PATTERN pattern[] = {
 		BLOCK_PATTERN.VERTICAL, BLOCK_PATTERN.HORIZONTAL, BLOCK_PATTERN.HORIZONTAL, BLOCK_PATTERN.SMALL 
 };
 ```
+
+#You can dseign the layout in 92 different patterns!
