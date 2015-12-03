@@ -104,18 +104,18 @@ BLOCK_PATTERN pattern[] = {
 After your patterns have been selected. Now is the time to start coding using the MosaicLayout library.
 
 * Assign your layout into your activity:
-```
+	```
     <com.adhamenaya.views.MosaicLayout
         android:id="@+id/mosaic_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
     </com.adhamenaya.views.MosaicLayout>
-```
+	```
 * Initialize the layout and its patterns:
-```
+	```
 	MosaicLayout mMosaicLayout = (MosaicLayout) findViewById(R.id.mosaic_layout);
 	MyAdapter mAdapater = mAdapater = new MyAdapter(getApplicationContext());
-```
+	```
 * Choose you layout patters mode. You have 3 modes:
   * Don't selected and patterns and let the layout choose patters from a 93 possible options randomly.
 		```
@@ -144,7 +144,7 @@ After your patterns have been selected. Now is the time to start coding using th
 		mMosaicLayout.chooseRandomPattern(true);
 		```
 * Set the adapter of the data to the layout:
-```
+	```
 	mMosaicLayout.setAdapter(mAdapater);
-```
+	```
 
