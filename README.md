@@ -105,24 +105,24 @@ After your patterns have been selected. Now is the time to start coding using th
 
 * Assign your layout into your activity:
 ```
-<com.adhamenaya.views.MosaicLayout
-    android:id="@+id/mosaic_layout"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content" >
-</com.adhamenaya.views.MosaicLayout>
+	<com.adhamenaya.views.MosaicLayout
+		android:id="@+id/mosaic_layout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+	</com.adhamenaya.views.MosaicLayout>
 ```
 * Initialize the layout and its patterns:
 ```
-MosaicLayout mMosaicLayout = (MosaicLayout) findViewById(R.id.mosaic_layout);
-MyAdapter mAdapater = mAdapater = new MyAdapter(getApplicationContext());
+	MosaicLayout mMosaicLayout = (MosaicLayout) findViewById(R.id.mosaic_layout);
+	MyAdapter mAdapater = mAdapater = new MyAdapter(getApplicationContext());
 ```
 * Choose you layout patters mode. You have 3 modes:
   * Don't selected and patterns and let the layout choose patters from a 93 possible options randomly.
-		```
+	```
 		mMosaicLayout.chooseRandomPattern(true);
-		```
+	```
   * Select a group of patterns to be used in your layout; and choose them to be displayed in the order you assigned them to the layout.
-		```
+	```
 		BLOCK_PATTERN pattern1[] = { BLOCK_PATTERN.BIG, BLOCK_PATTERN.BIG, BLOCK_PATTERN.SMALL, BLOCK_PATTERN.SMALL,
 									BLOCK_PATTERN.BIG, BLOCK_PATTERN.BIG, BLOCK_PATTERN.HORIZONTAL, BLOCK_PATTERN.HORIZONTAL };
 		BLOCK_PATTERN pattern2[] = { BLOCK_PATTERN.BIG, BLOCK_PATTERN.BIG, BLOCK_PATTERN.BIG, BLOCK_PATTERN.BIG, BLOCK_PATTERN.BIG,
@@ -131,9 +131,9 @@ MyAdapter mAdapater = mAdapater = new MyAdapter(getApplicationContext());
 		mMosaicLayout.addPattern(pattern1);
 		mMosaicLayout.addPattern(pattern2);
 		mMosaicLayout.chooseRandomPattern(false);
-		```
+	```
   * Select a group of patterns to be used in your layout; and choose them to be displayed randomly in the layout.
-		```
+	```
 		BLOCK_PATTERN pattern1[] = { BLOCK_PATTERN.BIG, BLOCK_PATTERN.BIG, BLOCK_PATTERN.SMALL, BLOCK_PATTERN.SMALL,
 									BLOCK_PATTERN.BIG, BLOCK_PATTERN.BIG, BLOCK_PATTERN.HORIZONTAL, BLOCK_PATTERN.HORIZONTAL };
 		BLOCK_PATTERN pattern2[] = { BLOCK_PATTERN.BIG, BLOCK_PATTERN.BIG, BLOCK_PATTERN.BIG, BLOCK_PATTERN.BIG, BLOCK_PATTERN.BIG,
@@ -142,9 +142,9 @@ MyAdapter mAdapater = mAdapater = new MyAdapter(getApplicationContext());
 		mMosaicLayout.addPattern(pattern1);
 		mMosaicLayout.addPattern(pattern2);
 		mMosaicLayout.chooseRandomPattern(true);
-		```
+	```
 * Set the adapter of the data to the layout:
 ```
-mMosaicLayout.setAdapter(mAdapater);
+	mMosaicLayout.setAdapter(mAdapater);
 ```
 
