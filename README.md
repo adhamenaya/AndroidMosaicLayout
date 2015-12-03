@@ -118,11 +118,11 @@ After your patterns have been selected. Now is the time to start coding using th
 ```
 * Choose you layout patters mode. You have 3 modes:
   * Don't selected and patterns and let the layout choose patters from a 93 possible options randomly.
-	```
+		```
 		mMosaicLayout.chooseRandomPattern(true);
-	```
+		```
   * Select a group of patterns to be used in your layout; and choose them to be displayed in the order you assigned them to the layout.
-	```
+		```
 		BLOCK_PATTERN pattern1[] = { BLOCK_PATTERN.BIG, BLOCK_PATTERN.BIG, BLOCK_PATTERN.SMALL, BLOCK_PATTERN.SMALL,
 									BLOCK_PATTERN.BIG, BLOCK_PATTERN.BIG, BLOCK_PATTERN.HORIZONTAL, BLOCK_PATTERN.HORIZONTAL };
 		BLOCK_PATTERN pattern2[] = { BLOCK_PATTERN.BIG, BLOCK_PATTERN.BIG, BLOCK_PATTERN.BIG, BLOCK_PATTERN.BIG, BLOCK_PATTERN.BIG,
@@ -131,9 +131,9 @@ After your patterns have been selected. Now is the time to start coding using th
 		mMosaicLayout.addPattern(pattern1);
 		mMosaicLayout.addPattern(pattern2);
 		mMosaicLayout.chooseRandomPattern(false);
-	```
+		```
   * Select a group of patterns to be used in your layout; and choose them to be displayed randomly in the layout.
-	```
+		```
 		BLOCK_PATTERN pattern1[] = { BLOCK_PATTERN.BIG, BLOCK_PATTERN.BIG, BLOCK_PATTERN.SMALL, BLOCK_PATTERN.SMALL,
 									BLOCK_PATTERN.BIG, BLOCK_PATTERN.BIG, BLOCK_PATTERN.HORIZONTAL, BLOCK_PATTERN.HORIZONTAL };
 		BLOCK_PATTERN pattern2[] = { BLOCK_PATTERN.BIG, BLOCK_PATTERN.BIG, BLOCK_PATTERN.BIG, BLOCK_PATTERN.BIG, BLOCK_PATTERN.BIG,
@@ -142,7 +142,7 @@ After your patterns have been selected. Now is the time to start coding using th
 		mMosaicLayout.addPattern(pattern1);
 		mMosaicLayout.addPattern(pattern2);
 		mMosaicLayout.chooseRandomPattern(true);
-	```
+		```
 * Set the adapter of the data to the layout:
 ```
 	mMosaicLayout.setAdapter(mAdapater);
