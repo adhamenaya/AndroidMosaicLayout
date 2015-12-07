@@ -148,8 +148,8 @@ After your patterns have been selected. Now is the time to start coding using th
   mMosaicLayout.setAdapter(mAdapater);
 ```
 
-#License
-Copyright (c) 2015 Adham Enaya<[http://www.adhamenaya.com](http://www.adhamenaya.com)>
+## MIT License
+Copyright (c) 2015 Adham Enaya - [http://www.adhamenaya.com](http://www.adhamenaya.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
