@@ -52,8 +52,7 @@ public class MosaicLayout extends ScrollView {
 	private FrameLayout frameLayout;
 
 	/**
-	 * @param context
-	 *            context where the layout works in
+	 * @param context: the context where the layout works in
 	 * 
 	 * @description Constructor that pass an object of the context
 	 */
@@ -86,8 +85,7 @@ public class MosaicLayout extends ScrollView {
 	}
 
 	/**
-	 * @param adapter
-	 *            the adapter the binds the data to the layout
+	 * @param adapter: the adapter the binds the data to the layout
 	 * 
 	 * @description this function set the adapter for the layout and start
 	 *              showing data according to it.
@@ -99,10 +97,8 @@ public class MosaicLayout extends ScrollView {
 	}
 
 	/**
-	 * @param xr
-	 *            the x coordinate on the screen
-	 * @param y
-	 *            the y coordinate on the screen
+	 * @param x: the x coordinate on the screen
+	 * @param y: the y coordinate on the screen
 	 * 
 	 * @return the cell object
 	 * 
@@ -126,14 +122,10 @@ public class MosaicLayout extends ScrollView {
 	}
 
 	/**
-	 * @param x1
-	 *            the x coordinate of the first point
-	 * @param y1
-	 *            the y coordinate of the first point
-	 * @param x2
-	 *            the x coordinate of the second point
-	 * @param y2
-	 *            the y coordinate of the second point
+	 * @param x1: the x coordinate of the first point
+	 * @param y1: the y coordinate of the first point
+	 * @param x2: the x coordinate of the second point
+	 * @param y2: the y coordinate of the second point
 	 * 
 	 * @return the distance
 	 * 
@@ -145,8 +137,7 @@ public class MosaicLayout extends ScrollView {
 	 */
 
 	/**
-	 * @param context
-	 *            the context where the blocks are shown
+	 * @param context: the context where the blocks are shown
 	 * 
 	 * @description this function binds the data in already defined block
 	 *              pattern,
@@ -226,13 +217,11 @@ public class MosaicLayout extends ScrollView {
 	}
 
 	private void display(Context cx) {
+		ArrayList<Block> blocks = new ArrayList<Block>();
 
 		counter = coorX = coorY = 0;
 		calculateAllCells(cx);
-
 		pattern = getDisplayPattern();
-
-		ArrayList<Block> blocks = new ArrayList<Block>();
 
 		for (int i = 0; i < pattern.size(); i++) {
 
@@ -254,24 +243,16 @@ public class MosaicLayout extends ScrollView {
 		for (int i = 0; i < blocks.size(); i++) {
 
 			CellView cv = new CellView(cx);
-
 			View view = mAdapter.getView(postion, null, frameLayout);
-
 			cv.addView(view);
-
+			
 			FrameLayout.LayoutParams params = new FrameLayout.LayoutParams((int) blocks.get(i).width, (int) blocks.get(i).height);
-
-			params.setMargins((int) blocks.get(i).x1, (int) blocks.get(i).y1 + (int) blocks.get(i).getHeightShift(maxHeights), 0,
-					0);
+			params.setMargins((int) blocks.get(i).x1, (int) blocks.get(i).y1 + (int) blocks.get(i).getHeightShift(maxHeights), 0, 0);
 
 			frameLayout.addView(cv, params);
-
 			cells.get(i).setCellView(cv);
-
 			postion++;
-
 			view.setTag(postion);
-
 			setViewListeners(view);
 
 			if (postion >= mAdapter.getCount())

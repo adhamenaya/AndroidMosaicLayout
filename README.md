@@ -1,14 +1,14 @@
-# Android-MosaicLayout-v0.1
-Mosaiclayout is android layout to display group of views in more that 92 different patterns.
+# AndroidMosaicLayout
+AndroidMosaicLayout is android layout to display group of views in more that 92 different patterns.
 
 ![screenshots](https://cloud.githubusercontent.com/assets/1500868/11513643/fb4e754e-987c-11e5-8f18-025d934c69b4.png)
 
 
-## What is MosaicLayout?
+## What is AndroidMosaicLayout?
 It is UI layout library for android. It displays a group of views and view groups (Images, Text, Layout...) in beautiful decoration. 
 It offers a lot of patters (92 different pattern) that can you use. 
 
-## How to use the MosaicLayout?
+## How to use the AndroidMosaicLayout?
 You can choose a specific patterns from the different options you have. OR don't choose any pattern and let the layout choose its patterns randomly.
 If you decided to choose a pattern or more, you have to follow the following notes:
 
@@ -117,7 +117,7 @@ After your patterns have been selected. Now is the time to start coding using th
   MyAdapter mAdapater = mAdapater = new MyAdapter(getApplicationContext());
 ```
 * Choose you layout patters mode. You have 3 modes:
-  * Don't selected and patterns and let the layout choose patters from a 93 possible options randomly.
+  * Don't selected and patterns and let the layout choose patters from a 92 possible options randomly.
   ```
 	mMosaicLayout.chooseRandomPattern(true);
   ```
