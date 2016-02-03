@@ -8,6 +8,9 @@ AndroidMosaicLayout is android layout to display group of views in more that 90 
 It is UI layout library for android. It displays a group of views and view groups (Images, Text, Layout...) in beautiful decoration. 
 It offers a lot of patters (90 different pattern) that can you use. 
 
+
+NOTE: To use the android studio example, you need to obtain your API key for the image services https://pixabay.com 
+
 ## How to use the AndroidMosaicLayout?
 You can choose a specific patterns from the different options you have. OR don't choose any pattern and let the layout choose its patterns randomly.
 If you decided to choose a pattern or more, you have to follow the following notes:
