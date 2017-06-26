@@ -27,16 +27,16 @@ If you decided to choose a pattern or more, you have to follow the following not
 
 ```
  ----------- ----------- ----------- -----------
-|			|			|			|			|
-|	img 1	|	img 2	|	img 3	|	img 4	|
-|	small	|	small	|	small	|	small	|
-|			|			|			|			|
+|           |           |           |           |
+|   img 1   |   img 2   |    img 3  |   img 4   |
+|   small   |   small   |    small  |   small   |
+|           |           |           |           |
 | --------- | --------- | --------- | --------- |
-|			|			|			|			|
-|	img 5	|	img 6	|	img 7	|	img 8	|
-|	small	|	small	|	small	|	small	|
-|			|			|			|			|
- ----------  ----------- ----------- -----------
+|           |           |           |           |
+|   img 5   |  img 6    |   img 7   |   img 8   |
+|   small   |   small   |   small   |   small   |
+|           |           |           |           |
+ ----------- ----------- ----------- -----------
  ```
  
  As you notice in the previous table, the layout contains on small squares only.
@@ -53,17 +53,17 @@ BLOCK_PATTERN pattern[] = {
 
 ```
  ----------- ----------- ----------- -----------
-|						|			|			|
-|				    	|	img 2	|	img 3	|
-|	big 		big		|	small	|	small	|
-|						|			|			|
-| 		  img1			| --------- | --------- |
-|						|			|			|
-|	 		    	    |	img 4	|	img 5	|
-|	big			big		|	small	|	small	|
-|						|			|			|
- ----------  ----------- ----------- -----------
- ```
+|                       |           |           |
+|                       |    img 2  |   img 3   |
+|   big         big     |    small  |   small   |
+|                       |           |           |
+|        img 1          | --------- | --------- |
+|                       |           |           |
+|                       |   img 4   |   img 5   |
+|   big         big.    |   small   |   small   |
+|                       |           |           |
+ ----------- ----------- ----------- -----------
+```
  
  As you notice in the previous table, image 1 occupies 4 inner cells creating a big block in the layout.
  Then the layout pattern should be written as: 
@@ -79,17 +79,17 @@ BLOCK_PATTERN pattern[] = {
 
 ```
  ----------- ----------- ----------- -----------
-|			|			|						|
-|			|	img 2	|		  img 3			|
-|	vert.	|	small	|	horiz.		horiz.	|
-|			|			|						|
-|	img 1	| --------- | --------- | --------- |
-|			|						|			|
-|	 		|		  img 4			|	img 5	|
-|	vert.	|	horiz.		horiz.	|	small	|
-|			|						|			|
+|           |           |                       |
+|           |   img 2   |         img 3         |
+|   vert.   |   small   |   horiz.      horiz.  |
+|           |           |                       |
+|   img 1   | --------- | --------- | --------- |
+|           |                       |           |
+|           |         img 4         |   img 5   |
+|   vert.   |   horiz.      horiz.  |   small   |
+|           |                       |           |
  ----------  ----------- ----------- -----------
- ```
+```
  
  As you notice in the previous table, image 1 occupies 2 inner cells vertically, images 3 and 4 occupies 2 inner cells horizontally/
  Then the layout pattern should be written as: 
